@@ -9,11 +9,12 @@ squid is running at 10.0.0.80:8080.
 
 ## from vagrant
 1. install the vagrant proxy plugin:
-``
+```
 vagrant plugin install vagrant-proxyconf
-``
+```
+
 2. add proxy settings to Vagrantfile or global Vaglant configulation(~/.vagrant.d/Vagrantfile)
-``
+```
 Vagrant.configure("2") do |config|
   # Enable caching web server
   if Vagrant.has_plugin?("vagrant-proxyconf")
@@ -22,4 +23,4 @@ Vagrant.configure("2") do |config|
     config.proxy.no_proxy = "localhost,127.0.0.1"
   end
 end
-``
+```
